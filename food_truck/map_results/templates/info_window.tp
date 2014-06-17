@@ -1,0 +1,5 @@
+<div class="info_window">
+    <h2><%=title %></h2>
+    <p>Latitude: <%=lat %></p>
+    <p>Longitude: <%=lng %></p>
+</div>

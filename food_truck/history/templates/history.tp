@@ -1,0 +1,12 @@
+<ul class="list-group">    <% for(var i=0; i<searches.length; i++) {
+        var s = searches[i]; %>
+
+    <li class="list-group-item">
+        <div class='search' data-id='<%= s.get('id') %>'>
+            <span class='query'><%= s.get('query') %></span>
+            <span class="badge"><%= s.get('count') %></span>
+            <span class="glyphicon glyphicon-remove-sign pull-right remove"></span>
+        </div>
+    </li>
+    <% } %>
+</ul>

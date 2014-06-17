@@ -1,0 +1,26 @@
+<div class="container">
+
+    <div class="row header">
+        <div class='col-xs-6 col-xs-offset-3'>
+                <div class='search_bar well'></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class='col-xs-3'>
+            <div class='history'></div>
+        </div>
+        <div class='col-xs-9'>
+            <div class='search_results'>
+                <div class='tabs_wrapper'>
+                    <ul class='nav nav-tabs nav-justified'>
+                        <li class='tab current'><a href='#food_panel'>Results</a></li>
+                        <li class='tab'><a href='#map_panel'>Maps</a></li>
+                    </ul>
+                    <div id='food_panel' class='panel fill'></div>
+                    <div id='map_panel' class='panel fill'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

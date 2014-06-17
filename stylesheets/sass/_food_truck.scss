@@ -1,0 +1,94 @@
+@mixin search_bar_background_gradient($startColor: #024a68, $endColor: #0772a1) {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$startColor, endColorstr=$endColor); /* for IE */
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $startColor), color-stop(100%, $endColor));
+  background-image: -webkit-linear-gradient($startColor, $endColor);
+  background-image: -moz-linear-gradient($startColor, $endColor);
+  background-image: -o-linear-gradient($startColor, $endColor);
+  background-image: linear-gradient($startColor, $endColor);
+}
+@mixin rounded_corners($radius: 5px) {
+	-moz-border-radius-topright: $radius;
+	-moz-border-radius-topleft: $radius; 
+	-webkit-border-top-right-radius: $radius;
+	-webkit-border-top-left-radius: $radius;
+	border-top-right-radius: $radius;
+	border-top-left-radius: $radius;
+}
+
+body {
+  background-image: url(../../assets/congruent_outline.png);
+  #food_truck_application {
+    .header {
+      //@include search_bar_background_gradient;
+      .search_bar {
+        .search_form {
+
+        }
+      }
+    }
+
+    .container {
+      .history {
+        .search {
+          .badge {
+            float:left;
+          }
+        }
+      }
+      .map_results {
+
+      }
+      .search_results {
+        .tabs_wrapper {
+          background-color: white;
+          .nav-tabs {
+            .tab {
+              a {
+                //background-color: white;
+              }
+            }
+            .tab.active {
+              a {
+                //background-color: antiquewhite;
+              }
+            }
+          }
+          .panel {
+            table {
+              width: 100%;
+            }
+
+            thead, tbody, tr, td, th { display: block; }
+
+            tr:after {
+              content: ' ';
+              display: block;
+              visibility: hidden;
+              clear: both;
+            }
+
+            thead th {
+              height: 30px;
+
+              /*text-align: left;*/
+            }
+
+            tbody {
+              overflow-y: auto;
+            }
+
+            thead {
+              /* fallback */
+            }
+
+
+            tbody td, thead th {
+              width: 24%;
+              float: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Menu</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% for(var i=0; i<results.length; i++) {
+        var r = results[i]; %>
+        <tr>
+            <% if (r.get('facilitytype') === 'Truck') { %>
+                <td><span class="glyphicon glyphicon-road"></span></td>
+            <% } else { %>
+                <td><span class="glyphicon glyphicon-shopping-cart"></span></td>
+            <% } %>
+            <td><%= r.get('applicant') %></td>
+            <td><%= r.get('fooditems') %></td>
+            <td><%= r.get('address') %></td>
+        </tr>
+
+    <% } %>
+    </tbody>
+
+</table>
