@@ -5,9 +5,13 @@ a food truck finder side project for the city of san francisco
 uses google maps and https://data.sfgov.org/
 
 
-Setting up
-==========
-npm install
-bower install
-grunt
-visit http://localhost:3300
+#Setting up
+
+1) npm install
+
+2) bower install
+
+3) grunt
+ 
+4) visit http://localhost:3300
+ 
