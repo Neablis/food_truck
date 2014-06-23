@@ -6,11 +6,19 @@ define(['jquery',
 	function( $, _, Backbone) {
 
 		var Tabs = Backbone.View.extend({
+            /** @lends Tabs.prototype */
 
 			events: {
 				'click .tab a': 'tabClick'
 			},
 
+            /**
+             * This is the View for Tabs.
+             *
+             * @augments external:Backbone.View
+             * @constructs
+             * @name Tabs
+             */
 			initialize: function() {
 			
 				this.$el.find('.panel').hide();

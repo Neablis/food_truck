@@ -7,6 +7,7 @@ define(['jquery',
 	function( $, _, Backbone, historyTp) {
 
 		var History = Backbone.View.extend({
+            /** @lends History.prototype */
 
 			events: {
 				'click .remove': 'removeSearch',
@@ -15,6 +16,12 @@ define(['jquery',
 				'mouseenter .search': 'mouseenter'
 			},
 
+            /**
+             * This is the model for history.
+             *
+             * @augments external:Backbone.Model
+             * @constructs
+             */
 			initialize: function(options) {
 
                 this.options = options;

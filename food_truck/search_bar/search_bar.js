@@ -7,12 +7,19 @@ define(['jquery',
 	function( $, _, Backbone, searchBarTp) {
 
 		var SearchBar = Backbone.View.extend({
+            /** @lends SearchBar.prototype */
 
 			events: {
 				'click .search': 'search',
                 'keypress #query': 'search'
             },
 
+            /**
+             * This is the model for SearchBar.
+             *
+             * @augments external:Backbone.Model
+             * @constructs
+             */
 			initialize: function() {
 				this.$el.html(_.template(searchBarTp, {}));
 			},

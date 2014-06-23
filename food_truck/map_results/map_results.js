@@ -6,7 +6,14 @@ define(['jquery',
     function( $, _, Backbone) {
 
         var MapResults = Backbone.View.extend({
+            /** @lends MapResults.prototype */
 
+            /**
+             * This is the model for map_results.
+             *
+             * @augments external:Backbone.Model
+             * @constructs
+             */
             initialize: function (options) {
                 this.template = options.template;
             },

@@ -2,7 +2,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         concurrent: {
-            target1: ['jshint'],
+            target1: ['jshint', 'jsdoc'],
             target2: ['nodemon', 'watch']
         },
         compass: {
@@ -33,6 +33,15 @@ module.exports = function(grunt) {
         },
         jshint: {
             all: ['Gruntfile.js', 'food_truck/**/*.js']
+        },
+        jsdoc : {
+            dist : {
+                src: ['food_truck/*.js', 'test/*.js'],
+                options: {
+                    destination: 'doc',
+                    configure: 'conf.json'
+                }
+            }
         }
     });
     grunt.loadNpmTasks('grunt-contrib-compass');
@@ -41,4 +50,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.registerTask('default', ['concurrent:target1', 'concurrent:target2']);
+    grunt.loadNpmTasks('grunt-jsdoc');
 };

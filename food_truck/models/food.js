@@ -6,6 +6,7 @@ define(['jquery',
 	function( $, _, Backbone) {
 
 		var Food = Backbone.Model.extend({
+            /** @lends models/food.prototype */
 
 			search: function(params, success, error) {
 			
